@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Place Keeper</title>
+        <body onload="onInit()">
+            <header>
+                <h1>Place Keeper</h1>
+                <h2>Find your way back to your best places</h2>
+            </header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="places.html">Places</a>
+                <a href="user-setting.html">Setting</a>
+            </nav>
+            <form id="userSet" onsubmit="onSubmit(this)">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" placeholder="Enter email here">
+                <br>
+                <label for="age" id="sAge">Age 18</label>
+                <input type="range" id="age" name="age" min="18" max="120" value="18" onchange="showAge(this.value)"/>
+                <br>
+                <section class="colors">
+                
+                <p>Colors</p>
+
+                <label for="bgColor" id="bgcColor">Set Background Color</label>
+                <input type="color" id="bgc-color" name="bgColor" value="#ff0000"/>   
+                <br>
+                <label for="txtColor" id="txtColor">Set Text Color</label>
+                <input type="color" id="txtColor" name="txtColor" value="#ff0000"/>    
+                <br>
+                <label for="birthDate" id="birth-date">Set birth date</label>
+                <input type="date" name="birthDate" id="birthDate">
+                <br>
+                <label for="birthTime" id="birth-time">Set birth time</label>
+                <input type="time" name="birthTime" id="birthTime">
+                <br>
+                </section>
+                <button>Submit</button>
+            
+            </form>
+            <script src="js/services/storageService.js"></script>
+            <script src="js/services/utilServices.js"></script>
+            <script src="js/services/userService.js"></script>
+            <script src="js/services/placeService.js"></script>
+            <script src="js/place-keeper-controller.js"></script>
+            <script src="js/user-settings-controller.js"></script>
+            <script src="js/places-controller.js"></script>
+        </body>
+	</head>
+
